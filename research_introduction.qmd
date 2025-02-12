@@ -1,0 +1,44 @@
+---
+title: "Mind the Gap: Gender, Wages, and the Workforce Divide"
+author: "Team 8"
+date: today
+format: 
+  html:
+    bibliography: references.bib
+    csl: csl/econometrica.csl
+    toc: true
+---
+
+## Introduction
+
+Over the past two decades, gender equality in the global labor market has improved significantly. However, disparities in hiring, pay, and career advancement remain pervasive. According to @ilo2023wage, women earned, on average, 20% less than men globally in 2023. Moreover, women continue to be underrepresented in leadership positions and high-paying industries, highlighting persistent challenges in achieving workplace equity.
+
+In the United States, gender equality is further influenced by state-level political ideologies. Labor policies such as minimum wage regulations, paid parental leave, and workplace protections vary significantly between conservative (red) and liberal (blue) states, leading to differences in wage equality and female workforce participation @blau2017gender. Examining these policy variations is crucial to understanding the systemic factors shaping gender-based employment disparities.
+
+## Why Is This Topic Important?
+
+Gender disparities in the labor market not only impact fairness and equity, but also have profound implications for economic growth, business performance, and social development. Persistent pay inequality, occupational segregation, and gender discrimination in hiring can limit women's labor force participation and hinder overall economic sustainability.
+
+Moreover, as labor policies diverge across states, it becomes increasingly important to analyze their impact on gendered employment patterns. Differences in wage transparency laws, parental leave policies, and anti-discrimination protections can either exacerbate or mitigate the gender wage gap. By exploring these trends, this research aims to provide data-driven insights to support policies promoting gender equality in the workforce.
+
+## Key Trends in 2024  
+
+Several key trends make this a crucial area of study in 2024:  
+
+1. **Persistence of the Pay Gap** – @blau2017gender found that the closing of the gender pay gap slowed after 2010, with 38% of the gap unexplained by education or experience. This persistent disparity may be attributed to implicit bias or industry segregation.  
+2. **Industry Gender Segregation** – Women continue to be overrepresented in industries such as education and healthcare, while comprising less than 30% of the workforce in engineering and computer science @bls2023labor.  
+
+## Expected Findings  
+
+This study is expected to identify the following trends:  
+
+1. **Gender hiring patterns across industries** – Men continue to dominate the tech industry, while the healthcare and education sectors remain female-dominated @basu2023gender.  
+2. **Impact of the policy environment on gender equality** – States with progressive labor policies (blue states) are expected to perform better in closing the gender wage gap and increasing female participation in high-paying industries. Conversely, red states are likely to exhibit larger pay gaps and lower rates of female career advancement @padova2024gender.  
+
+By integrating data across states and industries, this study will reveal how policy environments and industry characteristics interact to shape gender disparities in employment. The findings will contribute to evidence-based labor policies aimed at reducing workforce i
+
+## Literature Review  
+
+Some studies on gender disparities in hiring have focused on the persistent inequalities shaped by organizational structures, labor market conditions, cultural backgrounds, and political influences. @campero2019gender explore how the gender composition of the labor force impacts hiring outcomes, finding that both men and women face disadvantages when applying for positions where the opposite gender dominates. Similarly, @gorman2005gender highlights the role of gender stereotypes and group biases in hiring decisions. Selection criteria that emphasize traditionally masculine traits tend to reduce women’s representation in certain industries, whereas female decision-makers are more likely to hire other women. @birkelund2022gender take a cross-national approach, revealing minimal discrimination against women in hiring but noting bias against men in some European countries. Their findings suggest that hiring biases can vary depending on institutional and cultural contexts.  
+
+Some research also demonstrates how the intersection of gender disparities and political influences makes labor market dynamics even more complex. @may2017gender examine geographic differences in gender representation across occupations and find that conservative-leaning states tend to have more pronounced occupational segregation by gender, while blue states exhibit more integrated labor markets. This suggests that cultural and policy differences between conservative and liberal states contribute to disparities in hiring practices and workforce diversity. Expanding on this analysis, @mcveigh2007red link occupational segregation to political outcomes, arguing that Republican-leaning counties often have more rigid gender-based occupational divisions, reinforcing economic and social inequality. These findings indicate that gender-based employment disparities are not just the result of individual biases or company-level practices, but are also embedded in broader political and cultural environments, shaping both labor market participation and electoral behavior.  
