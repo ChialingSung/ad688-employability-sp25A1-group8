@@ -1,0 +1,29 @@
+---
+title: "Data Analysis: Mind the Gap – Gender, Wages, and the Workforce Divide"
+subtitle: "Comprehensive Data Cleaning & Exploratory Analysis of Workforce Disparities"
+author:
+  - name: "Team 8"
+  - name: Jianhao Hong
+    affiliations:
+      - id: bu
+        name: Boston University
+        city: Boston
+        state: MA
+  - name: Xinran Li
+    affiliations:
+      - ref: bu
+  - name: Chialing Sung
+    affiliations:
+      - ref: bu
+  - name: Zimo Zeng
+    affiliations:
+      - ref: bu
+bibliography: references.bib
+csl: csl/econometrica.csl
+format: 
+  html:
+    toc: true
+    number-sections: true
+    df-print: paged
+---
+
