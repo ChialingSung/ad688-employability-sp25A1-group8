@@ -9,7 +9,7 @@ website:
         text: "Home"
       - href: introduction.qmd
         text: "Introduction"
-      - href: data_cleaning.qmd
+      - href: data_analysis.ipynb
         text: "Data Cleaning & Exploration"
       - href: eda.qmd
         text: "Exploratory Data Analysis"
