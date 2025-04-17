@@ -171,3 +171,5 @@ cython_debug/
 .pypirc
 
 /.quarto/
+job_postings.csv
+

@@ -1,0 +1,71 @@
+---
+title: "Job Market Analysis"
+author: "Team 8"
+date: today
+bibliography: reference/references.bib
+csl: reference/csl/econometrica.csl
+format: 
+  html:
+    toc: true
+---
+<div style="background-color: #f5f6fa; padding: 2rem; text-align: center; border-radius: 1rem; margin-bottom: 2rem;">
+  <h1 style="margin-bottom: 0.5rem;">Mind the Gap</h1>
+  <p style="font-size: 1.2rem; color: #555;">Exploring Gender, Wages, and the Workforce Divide</p>
+</div>
+
+
+<div style="text-align: center;">
+  <img src="reference/home_1.png" alt="Gender Wage Gap Illustration" style="max-width: 400px; width: 100%;" />
+  <p style="font-size: 0.9em; color: gray;">[@chatgpt2025illustration]</p>
+</div>
+
+
+---
+
+## 📌 Project Overview
+
+This project investigates gender disparities in the U.S. labor market with a focus on wage inequality, occupational segregation, and the influence of political environments on gendered employment patterns.
+
+Using real-world job posting and employment data, we explore:
+
+- Persistent gender pay gaps despite similar education or experience  
+- Overrepresentation of women in specific industries (e.g., education, healthcare)  
+- Effects of state-level labor policies on gender equality  
+
+We apply machine learning and natural language processing to extract insights and support **evidence-based policy recommendations**.
+
+---
+
+## 🔍 Key Sections
+
+- 🏁 [Introduction](introduction.qmd): Background, motivation, and research focus  
+- 🧹 [Data Cleaning & Exploration](data_analysis.ipynb): Preprocessing and dataset structure  
+- 📈 [Exploratory Data Analysis](eda.ipynb): Initial visualizations and variable distributions  
+- 💼 [Skill Gap Analysis](skill_gap_analysis.ipynb): Demand vs. supply of skills by gender and industry  
+- 🤖 [ML Methods](ml_methods.ipynb): Classification, clustering, and regression approaches  
+- 📚 [NLP Methods](nlp_methods.ipynb): Topic modeling and resume–job matching  
+- 📎 [References](references.csv): Full bibliography of supporting literature  
+
+---
+
+## 📖 Research Motivation
+
+> “Equality means more than passing laws. The struggle is really won in the hearts and minds of the community.”  
+> — *Barbara Gittings*
+
+We believe data can tell powerful stories and drive actionable change. This project seeks to transform labor statistics into insights that help bridge the gender divide in the workforce.
+
+---
+
+## 💻 Team Members
+
+Team 8 | AD688 | Boston University  
+Spring 2025
+
+---
+
+## 🔗 Start Exploring
+
+Click on any section above, or head directly to the [📖 Introduction](introduction.qmd) to begin reading.
+
+---

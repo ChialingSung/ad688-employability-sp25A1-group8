@@ -11,18 +11,18 @@ website:
         text: "Introduction"
       - href: data_analysis.ipynb
         text: "Data Cleaning & Exploration"
-      - href: eda.qmd
+      - href: eda.ipynb
         text: "Exploratory Data Analysis"
-      - href: skill_gap_analysis.qmd
+      - href: skill_gap_analysis.ipynb
         text: "Skill Gap Analysis"
-      - href: ml_methods.qmd
+      - href: ml_methods.ipynb
         text: "ML Methods"
-      - href: nlp_methods.qmd
+      - href: nlp_methods.ipynb
         text: "NLP Methods"
 
 format:
   html:
-    theme: cosmo
+    theme: sandstone
     toc: true
 
 execute:
