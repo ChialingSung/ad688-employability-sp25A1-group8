@@ -17,8 +17,8 @@ website:
         text: "Skill Gap Analysis"
       - href: ml_methods.ipynb
         text: "ML Methods"
-      - href: nlp_methods.ipynb
-        text: "NLP Methods"
+      - href: regression_methods.ipynb
+        text: "Regression Methods"
 
 format:
   html:
