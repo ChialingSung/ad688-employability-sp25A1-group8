@@ -17,6 +17,7 @@ This project explores gender disparities in the U.S. job market using real-world
 
 | 📁 Module                     | 📄 File                          | 📝 Description & Improvements |
 |------------------------------|----------------------------------|-------------------------------|
+| **Project Homepage**         | `index.qmd`                     | Quarto homepage for the project. Includes overview, intro image, navigation links, and section summaries. Serves as the landing page for the published website. |
 | **Introduction**             | `introduction.qmd`              | Introduces the motivation, context, and significance of studying gender disparities in the labor market. Highlights the role of industry structure and policy environments. |
 | **Data Cleaning & Exploration** | `data_analysis.ipynb`         | Cleaned missing values, removed irrelevant or duplicate columns, standardized job categories using NAICS and SOC codes. Includes summaries of job descriptions and salary columns. |
 | **Exploratory Data Analysis**  | `eda.ipynb`                   | Enhanced visualizations (bar charts, boxplots, pie/donut charts) to analyze job posting volumes, salary distributions, and remote work types across industries. Added business implications for career planning and workforce strategy. |
@@ -33,7 +34,6 @@ This project explores gender disparities in the U.S. job market using real-world
 | `data/`                 | Stores input datasets (e.g., `job_postings.csv`, `employment_gender.xlsx`) – *excluded from GitHub via `.gitignore`* |
 | `reference/`            | Contains project illustrations (`home_1.png`, `intro_1.png`), citation file `references.bib`, and CSL styling |
 | `_output/`              | Stores exported images and visualizations from EDA and ML methods |
-| `_site/`                | Auto-generated website output directory for GitHub Pages |
 | `.gitignore`            | Git tracking rules to exclude large or private files (e.g., datasets, environment folders) |
 | `_quarto.yml`           | Quarto configuration file for theming, navigation, and build control |
 | `README.md`             | Project overview and navigation guide (this file) |
