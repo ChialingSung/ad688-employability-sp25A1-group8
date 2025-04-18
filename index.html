@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -51,6 +85,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./reference/icon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -87,6 +122,7 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
@@ -110,31 +146,31 @@ div.csl-indent {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">🏠 Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./introduction.html"> 
-<span class="menu-text">Introduction</span></a>
+<span class="menu-text">📖 Introduction</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./data_analysis.html"> 
-<span class="menu-text">Data Cleaning &amp; Exploration</span></a>
+<span class="menu-text">🧹 Data Cleaning</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./eda.html"> 
-<span class="menu-text">Exploratory Data Analysis</span></a>
+<span class="menu-text">📊 EDA</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./skill_gap_analysis.html"> 
-<span class="menu-text">Skill Gap Analysis</span></a>
+<span class="menu-text">💼 Skill Gap</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./ml_methods.html"> 
-<span class="menu-text">ML Methods</span></a>
+<span class="menu-text">🤖 ML Methods</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./regression_methods.html"> 
-<span class="menu-text">Regression Methods</span></a>
+<span class="menu-text">📈 Regression</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -165,7 +201,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Job Market Analysis</h1>
+<div class="quarto-title-block"><div><h1 class="title">Job Market Analysis</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -194,52 +230,62 @@ div.csl-indent {
 </header>
 
 
-<div style="background-color: #f5f6fa; padding: 2rem; text-align: center; border-radius: 1rem; margin-bottom: 2rem;">
-<h1 style="margin-bottom: 0.5rem;">
-Mind the Gap
+<!-- 🟣 Hero Section -->
+<div style="background: linear-gradient(90deg, #f8f9fa, #e9ecef); padding: 2rem; border-radius: 1rem; text-align: center; margin-bottom: 2rem;">
+<h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">
+💡 Mind the Gap
 </h1>
 <p style="font-size: 1.2rem; color: #555;">
 Exploring Gender, Wages, and the Workforce Divide
 </p>
 </div>
-<div style="text-align: center;">
-<img src="reference/home_1.png" alt="Gender Wage Gap Illustration" style="max-width: 400px; width: 100%;">
-<p style="font-size: 0.9em; color: gray;">
-Source:<span class="citation" data-cites="chatgpt2025illustration">ChatGPT (<a href="#ref-chatgpt2025illustration" role="doc-biblioref">(2025)</a>)</span>
+<!-- 👀 Illustration -->
+<div style="text-align: center; margin-bottom: 2rem;">
+<img src="reference/home_1.png" alt="Gender Wage Gap Illustration" style="max-width: 420px; width: 100%; border-radius: 0.5rem;">
+<p style="font-size: 0.85rem; color: gray;">
+Source: <span class="citation" data-cites="chatgpt2025illustration">ChatGPT (<a href="#ref-chatgpt2025illustration" role="doc-biblioref">(2025)</a>)</span>
 </p>
 </div>
 <hr>
 <section id="project-overview" class="level2">
 <h2 class="anchored" data-anchor-id="project-overview">📌 Project Overview</h2>
-<p>This project investigates gender disparities in the U.S. labor market with a focus on wage inequality, occupational segregation, and the influence of political environments on gendered employment patterns.</p>
-<p>Using real-world job posting and employment data, we explore:</p>
+<p>This project investigates <strong>gender disparities</strong> in the U.S. labor market — focusing on wage inequality, occupational segregation, and how political environments shape employment outcomes.</p>
+<p>Using real-world job postings and labor statistics, we analyze:</p>
 <ul>
-<li>Persistent gender pay gaps despite similar education or experience<br>
+<li>📉 Persistent wage gaps despite equal qualifications<br>
 </li>
-<li>Overrepresentation of women in specific industries (e.g., education, healthcare)<br>
+<li>🧕 Female overrepresentation in caregiving industries (e.g., education, healthcare)<br>
 </li>
-<li>Effects of state-level labor policies on gender equality</li>
+<li>🗳️ Red vs.&nbsp;blue state policies and their effects on labor equality</li>
 </ul>
-<p>We apply machine learning and natural language processing to extract insights and support <strong>evidence-based policy recommendations</strong>.</p>
+<p>We apply <strong>machine learning</strong> and <strong>natural language processing</strong> techniques to derive insights and support policy recommendations grounded in data.</p>
 <hr>
 </section>
 <section id="key-sections" class="level2">
 <h2 class="anchored" data-anchor-id="key-sections">🔍 Key Sections</h2>
-<ul>
-<li>🏁 <a href="./introduction.html">Introduction</a>: Background, motivation, and research focus<br>
-</li>
-<li>🧹 <a href="./data_analysis.html">Data Cleaning &amp; Exploration</a>: Preprocessing and dataset structure<br>
-</li>
-<li>📈 <a href="./eda.html">Exploratory Data Analysis</a>: Initial visualizations and variable distributions<br>
-</li>
-<li>💼 <a href="./skill_gap_analysis.html">Skill Gap Analysis</a>: Demand vs.&nbsp;supply of skills by gender and industry<br>
-</li>
-<li>🤖 <a href="./ml_methods.html">ML Methods</a>: Classification, clustering, and regression approaches<br>
-</li>
-<li>📚 <a href="nlp_methods.ipynb">NLP Methods</a>: Topic modeling and resume–job matching<br>
-</li>
-<li>📎 <a href="references.csv">References</a>: Full bibliography of supporting literature</li>
-</ul>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; padding-top: 1rem;">
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+<p>🏁 <strong><a href="./introduction.html">Introduction</a></strong><br> Motivation, background, and research scope</p>
+</div>
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+<p>🧹 <strong><a href="./data_analysis.html">Data Cleaning</a></strong><br> Dataset structure and preprocessing</p>
+</div>
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+<p>📈 <strong><a href="./eda.html">EDA</a></strong><br> Visualizations and variable distributions</p>
+</div>
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+<p>💼 <strong><a href="./skill_gap_analysis.html">Skill Gap</a></strong><br> Gender-industry skill demand vs.&nbsp;supply</p>
+</div>
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+<p>🤖 <strong><a href="./ml_methods.html">ML Methods</a></strong><br> Clustering and classification models</p>
+</div>
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+<p>📚 <strong><a href="nlp_methods.ipynb">NLP Methods</a></strong><br> Topic modeling and resume analysis</p>
+</div>
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+<p>📎 <strong><a href="references.csv">References</a></strong><br> Supporting literature and datasets</p>
+</div>
+</div>
 <hr>
 </section>
 <section id="research-motivation" class="level2">
@@ -248,20 +294,26 @@ Source:<span class="citation" data-cites="chatgpt2025illustration">ChatGPT (<a h
 <p>“Equality means more than passing laws. The struggle is really won in the hearts and minds of the community.”<br>
 — <em>Barbara Gittings</em></p>
 </blockquote>
-<p>We believe data can tell powerful stories and drive actionable change. This project seeks to transform labor statistics into insights that help bridge the gender divide in the workforce.</p>
+<p>We believe that behind every datapoint is a story. This project turns workforce data into actionable insights — helping bridge gender gaps in employment and empowering fairer labor policies.</p>
 <hr>
 </section>
 <section id="team-members" class="level2">
 <h2 class="anchored" data-anchor-id="team-members">💻 Team Members</h2>
-<p>Team 8 | AD688 | Boston University<br>
-Spring 2025</p>
+<p><strong>Team 8</strong><br>
+Boston University · AD688 · Spring 2025<br>
+- Jianhao Hong<br>
+- Xinran Li<br>
+- Chialing Sung<br>
+- Zimo Zeng</p>
 <hr>
 </section>
 <section id="start-exploring" class="level2">
 <h2 class="anchored" data-anchor-id="start-exploring">🔗 Start Exploring</h2>
-<p>Click on any section above, or head directly to the <a href="./introduction.html">📖 Introduction</a> to begin reading.</p>
+<p>You can use the top navbar or click on any section above to begin. We recommend starting with the <a href="./introduction.html">📖 Introduction</a> for full context.</p>
 <hr>
 
+
+<!-- -->
 
 
 </section>
@@ -350,6 +402,75 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/chialingsung\.github\.io\/ad688-employability-sp25A1-group8\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -657,10 +778,139 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Job Market Analysis"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Team 8"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> today</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> reference/references.bib</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> reference/csl/econometrica.csl</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 3</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- 🟣 Hero Section --&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>&lt;div style="background: linear-gradient(90deg, #f8f9fa, #e9ecef); padding: 2rem; border-radius: 1rem; text-align: center; margin-bottom: 2rem;"&gt;</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  &lt;h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;"&gt;💡 Mind the Gap&lt;/h1&gt;</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  &lt;p style="font-size: 1.2rem; color: #555;"&gt;Exploring Gender, Wages, and the Workforce Divide&lt;/p&gt;</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- 👀 Illustration --&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center; margin-bottom: 2rem;"&gt;</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  &lt;img src="reference/home_1.png" alt="Gender Wage Gap Illustration" style="max-width: 420px; width: 100%; border-radius: 0.5rem;" /&gt;</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  &lt;p style="font-size: 0.85rem; color: gray;"&gt;Source: @chatgpt2025illustration&lt;/p&gt;</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📌 Project Overview</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>This project investigates **gender disparities** in the U.S. labor market — focusing on wage inequality, occupational segregation, and how political environments shape employment outcomes.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>Using real-world job postings and labor statistics, we analyze:</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>📉 Persistent wage gaps despite equal qualifications  </span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🧕 Female overrepresentation in caregiving industries (e.g., education, healthcare)  </span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🗳️ Red vs. blue state policies and their effects on labor equality  </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>We apply **machine learning** and **natural language processing** techniques to derive insights and support policy recommendations grounded in data.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔍 Key Sections</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; padding-top: 1rem;"&gt;</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>🏁 &lt;strong&gt;<span class="co">[</span><span class="ot">Introduction</span><span class="co">](introduction.qmd)</span>&lt;/strong&gt;&lt;br/&gt;</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Motivation, background, and research scope</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>🧹 &lt;strong&gt;<span class="co">[</span><span class="ot">Data Cleaning</span><span class="co">](data_analysis.ipynb)</span>&lt;/strong&gt;&lt;br/&gt;</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>Dataset structure and preprocessing</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>📈 &lt;strong&gt;<span class="co">[</span><span class="ot">EDA</span><span class="co">](eda.ipynb)</span>&lt;/strong&gt;&lt;br/&gt;</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>Visualizations and variable distributions</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>💼 &lt;strong&gt;<span class="co">[</span><span class="ot">Skill Gap</span><span class="co">](skill_gap_analysis.ipynb)</span>&lt;/strong&gt;&lt;br/&gt;</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>Gender-industry skill demand vs. supply</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>🤖 &lt;strong&gt;<span class="co">[</span><span class="ot">ML Methods</span><span class="co">](ml_methods.ipynb)</span>&lt;/strong&gt;&lt;br/&gt;</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>Clustering and classification models</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>📚 &lt;strong&gt;<span class="co">[</span><span class="ot">NLP Methods</span><span class="co">](nlp_methods.ipynb)</span>&lt;/strong&gt;&lt;br/&gt;</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Topic modeling and resume analysis</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>📎 &lt;strong&gt;<span class="co">[</span><span class="ot">References</span><span class="co">](references.csv)</span>&lt;/strong&gt;&lt;br/&gt;</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>Supporting literature and datasets</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📖 Research Motivation</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; “Equality means more than passing laws. The struggle is really won in the hearts and minds of the community.”</span>  </span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; — *Barbara Gittings*</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>We believe that behind every datapoint is a story. This project turns workforce data into actionable insights — helping bridge gender gaps in employment and empowering fairer labor policies.</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## 💻 Team Members</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>**Team 8**  </span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>Boston University · AD688 · Spring 2025  </span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jianhao Hong  </span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Xinran Li  </span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chialing Sung  </span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zimo Zeng</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔗 Start Exploring</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>You can use the top navbar or click on any section above to begin. We recommend starting with the <span class="co">[</span><span class="ot">📖 Introduction</span><span class="co">](introduction.qmd)</span> for full context.</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Team 8 | Boston University</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/ChialingSung/ad688-employability-sp25A1-group8">
+<p>GitHub</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

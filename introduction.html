@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -51,6 +85,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./reference/icon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -87,6 +122,7 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
@@ -110,31 +146,31 @@ div.csl-indent {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">🏠 Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./introduction.html" aria-current="page"> 
-<span class="menu-text">Introduction</span></a>
+<span class="menu-text">📖 Introduction</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./data_analysis.html"> 
-<span class="menu-text">Data Cleaning &amp; Exploration</span></a>
+<span class="menu-text">🧹 Data Cleaning</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./eda.html"> 
-<span class="menu-text">Exploratory Data Analysis</span></a>
+<span class="menu-text">📊 EDA</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./skill_gap_analysis.html"> 
-<span class="menu-text">Skill Gap Analysis</span></a>
+<span class="menu-text">💼 Skill Gap</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./ml_methods.html"> 
-<span class="menu-text">ML Methods</span></a>
+<span class="menu-text">🤖 ML Methods</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./regression_methods.html"> 
-<span class="menu-text">Regression Methods</span></a>
+<span class="menu-text">📈 Regression</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -152,11 +188,16 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#why-is-this-topic-important" id="toc-why-is-this-topic-important" class="nav-link" data-scroll-target="#why-is-this-topic-important">Why Is This Topic Important?</a></li>
-  <li><a href="#key-trends-in-2024" id="toc-key-trends-in-2024" class="nav-link" data-scroll-target="#key-trends-in-2024">Key Trends in 2024</a></li>
-  <li><a href="#expected-findings" id="toc-expected-findings" class="nav-link" data-scroll-target="#expected-findings">Expected Findings</a></li>
-  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">Literature Review</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">🧭 Introduction</a>
+  <ul class="collapse">
+  <li><a href="#global-context" id="toc-global-context" class="nav-link" data-scroll-target="#global-context">🌍 Global Context</a></li>
+  <li><a href="#the-u.s.-divide-politics-and-policy" id="toc-the-u.s.-divide-politics-and-policy" class="nav-link" data-scroll-target="#the-u.s.-divide-politics-and-policy">🇺🇸 The U.S. Divide: Politics and Policy</a></li>
+  </ul></li>
+  <li><a href="#why-is-this-topic-important" id="toc-why-is-this-topic-important" class="nav-link" data-scroll-target="#why-is-this-topic-important">🎯 Why Is This Topic Important?</a></li>
+  <li><a href="#key-trends-in-2024" id="toc-key-trends-in-2024" class="nav-link" data-scroll-target="#key-trends-in-2024">📈 Key Trends in 2024</a></li>
+  <li><a href="#expected-findings" id="toc-expected-findings" class="nav-link" data-scroll-target="#expected-findings">🔮 Expected Findings</a></li>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">📚 Literature Review</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">🔗 Summary</a></li>
   </ul>
 </nav>
     </div>
@@ -165,7 +206,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Mind the Gap: Gender, Wages, and the Workforce Divide</h1>
+<div class="quarto-title-block"><div><h1 class="title">Mind the Gap: Gender, Wages, and the Workforce Divide</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -195,45 +236,88 @@ div.csl-indent {
 
 
 <section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Over the past two decades, gender equality in the global labor market has improved significantly. However, disparities in hiring, pay, and career advancement remain pervasive. According to <span class="citation" data-cites="ilo2023wage">Organization (<a href="#ref-ilo2023wage" role="doc-biblioref">(2023)</a>)</span>, women earned, on average, 20% less than men globally in 2023. Moreover, women continue to be underrepresented in leadership positions and high-paying industries, highlighting persistent challenges in achieving workplace equity.</p>
-<p>In the United States, gender equality is further influenced by state-level political ideologies. Labor policies such as minimum wage regulations, paid parental leave, and workplace protections vary significantly between conservative (red) and liberal (blue) states, leading to differences in wage equality and female workforce participation <span class="citation" data-cites="blau2017gender">(<a href="#ref-blau2017gender" role="doc-biblioref">Blau and Kahn (2017)</a>)</span>. Examining these policy variations is crucial to understanding the systemic factors shaping gender-based employment disparities.</p>
+<h2 class="anchored" data-anchor-id="introduction">🧭 Introduction</h2>
+<p>Gender inequality in the labor market remains a persistent challenge—despite decades of progress toward workplace equity.</p>
+<section id="global-context" class="level3">
+<h3 class="anchored" data-anchor-id="global-context">🌍 Global Context</h3>
+<p>Over the past two decades, gender equality in the <strong>global labor market</strong> has improved significantly. However, disparities in <strong>hiring</strong>, <strong>pay</strong>, and <strong>career advancement</strong> remain pervasive. According to <span class="citation" data-cites="ilo2023wage">(<a href="#ref-ilo2023wage" role="doc-biblioref">Organization (2023)</a>)</span>, women earned, on average, <strong>20% less than men globally in 2023</strong>. Moreover, women continue to be underrepresented in <strong>leadership positions</strong> and <strong>high-paying industries</strong>, highlighting enduring barriers to upward mobility.</p>
+<p>These disparities are not just issues of fairness—they have broader implications for <strong>economic growth</strong>, <strong>business performance</strong>, and <strong>societal well-being</strong>. Persistent wage inequality, occupational segregation, and gender discrimination hinder women’s full participation in the labor force and reduce long-term economic sustainability.</p>
+<hr>
+</section>
+<section id="the-u.s.-divide-politics-and-policy" class="level3">
+<h3 class="anchored" data-anchor-id="the-u.s.-divide-politics-and-policy">🇺🇸 The U.S. Divide: Politics and Policy</h3>
+<p>In the United States, gender inequality is further shaped by <strong>state-level political ideologies</strong>. Labor policies—such as <strong>minimum wage regulations</strong>, <strong>paid parental leave</strong>, and <strong>workplace protections</strong>—differ significantly between <strong>conservative (red)</strong> and <strong>liberal (blue)</strong> states. These policy differences create variation in <strong>wage equality</strong> and <strong>female workforce participation</strong> <span class="citation" data-cites="blau2017gender">(<a href="#ref-blau2017gender" role="doc-biblioref">Blau and Kahn (2017)</a>)</span>.</p>
+<p>As labor policies diverge, it becomes increasingly important to examine how institutional and political contexts influence gendered employment patterns. This intersection of gender and politics serves as a core focus of our research.</p>
+<hr>
+</section>
 </section>
 <section id="why-is-this-topic-important" class="level2">
-<h2 class="anchored" data-anchor-id="why-is-this-topic-important">Why Is This Topic Important?</h2>
-<div style="text-align: center; margin-top: 1em; margin-bottom: 1em;">
-<img src="reference/intro_1.png" alt="Why Is This Topic Important" style="max-width: 80%; height: auto; border-radius: 8px;">
+<h2 class="anchored" data-anchor-id="why-is-this-topic-important">🎯 Why Is This Topic Important?</h2>
+<div style="text-align: center;">
+<img src="reference/intro_1.png" alt="Why Is This Topic Important" width="600">
 <p style="font-size: 0.9em; color: gray;">
-Source: <span class="citation" data-cites="chatgpt2025illustration">ChatGPT (<a href="#ref-chatgpt2025illustration" role="doc-biblioref">(2025)</a>)</span>
+Illustration by ChatGPT (2025)
 </p>
 </div>
-<p>Gender disparities in the labor market not only impact fairness and equity, but also have profound implications for economic growth, business performance, and social development. Persistent pay inequality, occupational segregation, and gender discrimination in hiring can limit women’s labor force participation and hinder overall economic sustainability.</p>
-<p>Moreover, as labor policies diverge across states, it becomes increasingly important to analyze their impact on gendered employment patterns. Differences in wage transparency laws, parental leave policies, and anti-discrimination protections can either exacerbate or mitigate the gender wage gap. By exploring these trends, this research aims to provide data-driven insights to support policies promoting gender equality in the workforce.</p>
+<p>Gender disparities in the labor market not only impact individual opportunity—they shape macro-level outcomes. Research has shown that:</p>
+<ul>
+<li>Women are systematically overrepresented in <strong>lower-paying</strong>, <strong>caregiving-oriented industries</strong> such as education and healthcare.</li>
+<li>Male-dominated industries like technology and engineering often offer higher wages and faster advancement.</li>
+<li>State-level policy environments influence how accessible these opportunities are to women.</li>
+</ul>
+<p>Additionally, differences in <strong>wage transparency laws</strong>, <strong>parental leave provisions</strong>, and <strong>anti-discrimination enforcement</strong> can either widen or narrow the gender wage gap.</p>
+<p>This project investigates these structural forces, aiming to translate data into insights that inform more equitable workforce policies.</p>
+<hr>
 </section>
 <section id="key-trends-in-2024" class="level2">
-<h2 class="anchored" data-anchor-id="key-trends-in-2024">Key Trends in 2024</h2>
-<p>Several key trends make this a crucial area of study in 2024:</p>
+<h2 class="anchored" data-anchor-id="key-trends-in-2024">📈 Key Trends in 2024</h2>
+<p>Several timely developments make this study especially relevant:</p>
 <ol type="1">
-<li><strong>Persistence of the Pay Gap</strong> – <span class="citation" data-cites="blau2017gender">Blau and Kahn (<a href="#ref-blau2017gender" role="doc-biblioref">(2017)</a>)</span> found that the closing of the gender pay gap slowed after 2010, with 38% of the gap unexplained by education or experience. This persistent disparity may be attributed to implicit bias or industry segregation.<br>
-</li>
-<li><strong>Industry Gender Segregation</strong> – Women continue to be overrepresented in industries such as education and healthcare, while comprising less than 30% of the workforce in engineering and computer science <span class="citation" data-cites="bls2023labor">(<a href="#ref-bls2023labor" role="doc-biblioref">Labor Statistics (2023)</a>)</span>.</li>
+<li><p><strong>Persistent Pay Gap</strong><br>
+<span class="citation" data-cites="blau2017gender">(<a href="#ref-blau2017gender" role="doc-biblioref">Blau and Kahn (2017)</a>)</span> found that the pace of closing the gender pay gap <strong>slowed after 2010</strong>, and that <strong>38% of the current gap remains unexplained</strong> by factors such as education or experience. This suggests the ongoing presence of implicit bias or structural barriers within industries.</p></li>
+<li><p><strong>Ongoing Gender Segregation by Industry</strong><br>
+Despite efforts toward inclusion, women remain <strong>overrepresented in education and healthcare</strong>, and make up <strong>less than 30%</strong> of the workforce in engineering and computer science <span class="citation" data-cites="bls2023labor">(<a href="#ref-bls2023labor" role="doc-biblioref">Labor Statistics (2023)</a>)</span>.</p></li>
 </ol>
+<p>These trends reflect not only enduring inequalities, but also opportunities for policy-driven change.</p>
+<hr>
 </section>
 <section id="expected-findings" class="level2">
-<h2 class="anchored" data-anchor-id="expected-findings">Expected Findings</h2>
-<p>This study is expected to identify the following trends:</p>
+<h2 class="anchored" data-anchor-id="expected-findings">🔮 Expected Findings</h2>
+<p>Our study is expected to reveal two primary trends:</p>
 <ol type="1">
-<li><strong>Gender hiring patterns across industries</strong> – Men continue to dominate the tech industry, while the healthcare and education sectors remain female-dominated <span class="citation" data-cites="basu2023gender">(<a href="#ref-basu2023gender" role="doc-biblioref">Basu et al. (2023)</a>)</span>.<br>
-</li>
-<li><strong>Impact of the policy environment on gender equality</strong> – States with progressive labor policies (blue states) are expected to perform better in closing the gender wage gap and increasing female participation in high-paying industries. Conversely, red states are likely to exhibit larger pay gaps and lower rates of female career advancement <span class="citation" data-cites="padova2024gender">(<a href="#ref-padova2024gender" role="doc-biblioref">Padova and Dhabi (2024)</a>)</span>.</li>
+<li><p><strong>Gendered Hiring Patterns Across Industries</strong><br>
+Men are expected to continue dominating <strong>STEM-related</strong> and <strong>technical fields</strong>, while women will remain more concentrated in <strong>healthcare</strong> and <strong>education</strong> <span class="citation" data-cites="basu2023gender">(<a href="#ref-basu2023gender" role="doc-biblioref">Basu et al. (2023)</a>)</span>.</p></li>
+<li><p><strong>Policy Influence on Gender Equality</strong><br>
+States with <strong>progressive labor policies</strong> (blue states) are likely to perform better in terms of closing the gender wage gap and improving access to high-paying industries. Conversely, conservative states may experience <strong>larger wage gaps</strong> and <strong>lower rates of female career advancement</strong> <span class="citation" data-cites="padova2024gender">(<a href="#ref-padova2024gender" role="doc-biblioref">Padova and Dhabi (2024)</a>)</span>.</p></li>
 </ol>
-<p>By integrating data across states and industries, this study will reveal how policy environments and industry characteristics interact to shape gender disparities in employment. The findings will contribute to evidence-based labor policies aimed at reducing workforce inequalities.</p>
+<p>By integrating job posting and labor data across sectors and states, we aim to identify how <strong>policy environments interact with labor market structure</strong> to shape employment outcomes.</p>
+<hr>
 </section>
 <section id="literature-review" class="level2">
-<h2 class="anchored" data-anchor-id="literature-review">Literature Review</h2>
-<p>Some studies on gender disparities in hiring have focused on the persistent inequalities shaped by organizational structures, labor market conditions, cultural backgrounds, and political influences. <span class="citation" data-cites="campero2019gender">Campero and Fernandez (<a href="#ref-campero2019gender" role="doc-biblioref">(2019)</a>)</span> explore how the gender composition of the labor force impacts hiring outcomes, finding that both men and women face disadvantages when applying for positions where the opposite gender dominates. Similarly, <span class="citation" data-cites="gorman2005gender">Gorman (<a href="#ref-gorman2005gender" role="doc-biblioref">(2005)</a>)</span> highlights the role of gender stereotypes and group biases in hiring decisions. Selection criteria that emphasize traditionally masculine traits tend to reduce women’s representation in certain industries, whereas female decision-makers are more likely to hire other women. <span class="citation" data-cites="birkelund2022gender">Birkelund et al. (<a href="#ref-birkelund2022gender" role="doc-biblioref">(2022)</a>)</span> take a cross-national approach, revealing minimal discrimination against women in hiring but noting bias against men in some European countries. Their findings suggest that hiring biases can vary depending on institutional and cultural contexts.</p>
-<p>Some research also demonstrates how the intersection of gender disparities and political influences makes labor market dynamics even more complex. <span class="citation" data-cites="may2017gender">May and McGarvey (<a href="#ref-may2017gender" role="doc-biblioref">(2017)</a>)</span> examine geographic differences in gender representation across occupations and find that conservative-leaning states tend to have more pronounced occupational segregation by gender, while blue states exhibit more integrated labor markets. This suggests that cultural and policy differences between conservative and liberal states contribute to disparities in hiring practices and workforce diversity. Expanding on this analysis, <span class="citation" data-cites="mcveigh2007red">McVeigh and Sobolewski (<a href="#ref-mcveigh2007red" role="doc-biblioref">(2007)</a>)</span> link occupational segregation to political outcomes, arguing that Republican-leaning counties often have more rigid gender-based occupational divisions, reinforcing economic and social inequality. These findings indicate that gender-based employment disparities are not just the result of individual biases or company-level practices, but are also embedded in broader political and cultural environments, shaping both labor market participation and electoral behavior.</p>
+<h2 class="anchored" data-anchor-id="literature-review">📚 Literature Review</h2>
+<p>Our research builds on a wide base of empirical studies that examine both <strong>gender-based discrimination</strong> and <strong>political influences</strong> on labor markets.</p>
+<ul>
+<li><span class="citation" data-cites="campero2019gender">(<a href="#ref-campero2019gender" role="doc-biblioref">Campero and Fernandez (2019)</a>)</span> show that the gender composition of the existing workforce influences hiring outcomes: applicants of the non-dominant gender often face disadvantages.</li>
+<li><span class="citation" data-cites="gorman2005gender">(<a href="#ref-gorman2005gender" role="doc-biblioref">Gorman (2005)</a>)</span> emphasizes the role of <strong>gender stereotypes</strong> and <strong>group biases</strong> in hiring criteria, showing that masculine-coded traits reduce women’s chances in male-dominated fields.</li>
+<li><span class="citation" data-cites="birkelund2022gender">(<a href="#ref-birkelund2022gender" role="doc-biblioref">Birkelund et al. (2022)</a>)</span> conduct a cross-national analysis, revealing minimal discrimination against women but notable bias against men in some countries—suggesting that cultural and institutional factors matter deeply.</li>
+</ul>
+<p>Other studies explore the <strong>political dimension</strong> of gendered labor patterns:</p>
+<ul>
+<li><span class="citation" data-cites="may2017gender">(<a href="#ref-may2017gender" role="doc-biblioref">May and McGarvey (2017)</a>)</span> demonstrate that conservative-leaning states tend to exhibit <strong>greater occupational segregation</strong> by gender, while blue states have more integrated labor markets.</li>
+<li><span class="citation" data-cites="mcveigh2007red">(<a href="#ref-mcveigh2007red" role="doc-biblioref">McVeigh and Sobolewski (2007)</a>)</span> link these labor patterns to political behavior, arguing that Republican-leaning counties reinforce gender divisions through both economic structures and ideological beliefs.</li>
+</ul>
+<p>Together, these findings underscore our central hypothesis:<br>
+&gt; <strong>Gender-based disparities are not merely the result of individual bias or firm-level decisions, but are embedded in broader social, political, and institutional systems.</strong></p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">🔗 Summary</h2>
+<p>This introduction establishes the basis for our analysis of gender inequality across U.S. labor markets.<br>
+Through data-driven methods and machine learning models, we seek to understand how occupational segregation and wage inequality are shaped by both <strong>industry dynamics</strong> and <strong>state-level policy environments</strong>—and how these forces intersect to influence opportunity, representation, and equity in the workforce.</p>
+<hr>
 
+
+<!-- -->
 
 
 </section>
@@ -250,9 +334,6 @@ Source: <span class="citation" data-cites="chatgpt2025illustration">ChatGPT (<a 
 </div>
 <div id="ref-campero2019gender" class="csl-entry" role="listitem">
 <span class="smallcaps">Campero, S., and R. M. Fernandez</span>. (2019): <span>“<a href="https://doi.org/10.1093/sf/soy097">Gender composition of labor queues and gender disparities in hiring</a>,”</span> <em>Social Forces</em>, 97, 1487–1516.
-</div>
-<div id="ref-chatgpt2025illustration" class="csl-entry" role="listitem">
-<span class="smallcaps">ChatGPT</span>. (2025): <span>“Illustration of Gender Disparities and Labor Policy Impact,”</span>AI-generated visual content.
 </div>
 <div id="ref-gorman2005gender" class="csl-entry" role="listitem">
 <span class="smallcaps">Gorman, E. H.</span> (2005): <span>“<a href="https://doi.org/10.1177/000312240507000408">Gender stereotypes, same-gender preferences, and organizational variation in the hiring of women: Evidence from law firms</a>,”</span> <em>American Sociological Review</em>, 70, 702–28.
@@ -352,6 +433,75 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/chialingsung\.github\.io\/ad688-employability-sp25A1-group8\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -659,10 +809,133 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Mind the Gap: Gender, Wages, and the Workforce Divide"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Team 8"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> today</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> reference/references.bib</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> reference/csl/econometrica.csl</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🧭 Introduction</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Gender inequality in the labor market remains a persistent challenge—despite decades of progress toward workplace equity.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🌍 Global Context</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Over the past two decades, gender equality in the **global labor market** has improved significantly. However, disparities in **hiring**, **pay**, and **career advancement** remain pervasive. According to [@ilo2023wage], women earned, on average, **20% less than men globally in 2023**. Moreover, women continue to be underrepresented in **leadership positions** and **high-paying industries**, highlighting enduring barriers to upward mobility.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>These disparities are not just issues of fairness—they have broader implications for **economic growth**, **business performance**, and **societal well-being**. Persistent wage inequality, occupational segregation, and gender discrimination hinder women’s full participation in the labor force and reduce long-term economic sustainability.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🇺🇸 The U.S. Divide: Politics and Policy</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>In the United States, gender inequality is further shaped by **state-level political ideologies**. Labor policies—such as **minimum wage regulations**, **paid parental leave**, and **workplace protections**—differ significantly between **conservative (red)** and **liberal (blue)** states. These policy differences create variation in **wage equality** and **female workforce participation** <span class="co">[</span><span class="ot">@blau2017gender</span><span class="co">]</span>.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>As labor policies diverge, it becomes increasingly important to examine how institutional and political contexts influence gendered employment patterns. This intersection of gender and politics serves as a core focus of our research.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🎯 Why Is This Topic Important?</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  &lt;img src="reference/intro_1.png" alt="Why Is This Topic Important" width="600"/&gt;</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  &lt;p style="font-size: 0.9em; color: gray;"&gt;Illustration by ChatGPT (2025)&lt;/p&gt;</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>Gender disparities in the labor market not only impact individual opportunity—they shape macro-level outcomes. Research has shown that:</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Women are systematically overrepresented in **lower-paying**, **caregiving-oriented industries** such as education and healthcare.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Male-dominated industries like technology and engineering often offer higher wages and faster advancement.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>State-level policy environments influence how accessible these opportunities are to women.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Additionally, differences in **wage transparency laws**, **parental leave provisions**, and **anti-discrimination enforcement** can either widen or narrow the gender wage gap.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>This project investigates these structural forces, aiming to translate data into insights that inform more equitable workforce policies.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📈 Key Trends in 2024</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>Several timely developments make this study especially relevant:</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Persistent Pay Gap**  </span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>   <span class="co">[</span><span class="ot">@blau2017gender</span><span class="co">]</span> found that the pace of closing the gender pay gap **slowed after 2010**, and that **38% of the current gap remains unexplained** by factors such as education or experience. This suggests the ongoing presence of implicit bias or structural barriers within industries.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Ongoing Gender Segregation by Industry**  </span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>   Despite efforts toward inclusion, women remain **overrepresented in education and healthcare**, and make up **less than 30%** of the workforce in engineering and computer science <span class="co">[</span><span class="ot">@bls2023labor</span><span class="co">]</span>.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>These trends reflect not only enduring inequalities, but also opportunities for policy-driven change.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔮 Expected Findings</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>Our study is expected to reveal two primary trends:</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Gendered Hiring Patterns Across Industries**  </span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>   Men are expected to continue dominating **STEM-related** and **technical fields**, while women will remain more concentrated in **healthcare** and **education** <span class="co">[</span><span class="ot">@basu2023gender</span><span class="co">]</span>.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Policy Influence on Gender Equality**  </span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>   States with **progressive labor policies** (blue states) are likely to perform better in terms of closing the gender wage gap and improving access to high-paying industries. Conversely, conservative states may experience **larger wage gaps** and **lower rates of female career advancement** <span class="co">[</span><span class="ot">@padova2024gender</span><span class="co">]</span>.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>By integrating job posting and labor data across sectors and states, we aim to identify how **policy environments interact with labor market structure** to shape employment outcomes.</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📚 Literature Review</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>Our research builds on a wide base of empirical studies that examine both **gender-based discrimination** and **political influences** on labor markets.</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">@campero2019gender</span><span class="co">]</span> show that the gender composition of the existing workforce influences hiring outcomes: applicants of the non-dominant gender often face disadvantages.</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">@gorman2005gender</span><span class="co">]</span> emphasizes the role of **gender stereotypes** and **group biases** in hiring criteria, showing that masculine-coded traits reduce women’s chances in male-dominated fields.</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">@birkelund2022gender</span><span class="co">]</span> conduct a cross-national analysis, revealing minimal discrimination against women but notable bias against men in some countries—suggesting that cultural and institutional factors matter deeply.</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>Other studies explore the **political dimension** of gendered labor patterns:</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">@may2017gender</span><span class="co">]</span> demonstrate that conservative-leaning states tend to exhibit **greater occupational segregation** by gender, while blue states have more integrated labor markets.</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">@mcveigh2007red</span><span class="co">]</span> link these labor patterns to political behavior, arguing that Republican-leaning counties reinforce gender divisions through both economic structures and ideological beliefs.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>Together, these findings underscore our central hypothesis:  </span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Gender-based disparities are not merely the result of individual bias or firm-level decisions, but are embedded in broader social, political, and institutional systems.**</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔗 Summary</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>This introduction establishes the basis for our analysis of gender inequality across U.S. labor markets.  </span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>Through data-driven methods and machine learning models, we seek to understand how occupational segregation and wage inequality are shaped by both **industry dynamics** and **state-level policy environments**—and how these forces intersect to influence opportunity, representation, and equity in the workforce.</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Team 8 | Boston University</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/ChialingSung/ad688-employability-sp25A1-group8">
+<p>GitHub</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
