@@ -16,7 +16,7 @@ format:
 
 <div style="text-align: center;">
   <img src="reference/home_1.png" alt="Gender Wage Gap Illustration" style="max-width: 400px; width: 100%;" />
-  <p style="font-size: 0.9em; color: gray;">[@chatgpt2025illustration]</p>
+  <p style="font-size: 0.9em; color: gray;">Source:@chatgpt2025illustration</p>
 </div>
 
 
