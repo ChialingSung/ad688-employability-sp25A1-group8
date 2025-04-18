@@ -3,30 +3,45 @@ project:
 
 website:
   title: "Job Market Analysis"
+  site-url: "https://chialingsung.github.io/ad688-employability-sp25A1-group8/"
+  favicon: reference/icon.png
   navbar:
+    background: primary
     left:
       - href: index.qmd
-        text: "Home"
+        text: "🏠 Home"
       - href: introduction.qmd
-        text: "Introduction"
+        text: "📖 Introduction"
       - href: data_analysis.ipynb
-        text: "Data Cleaning & Exploration"
+        text: "🧹 Data Cleaning"
       - href: eda.ipynb
-        text: "Exploratory Data Analysis"
+        text: "📊 EDA"
       - href: skill_gap_analysis.ipynb
-        text: "Skill Gap Analysis"
+        text: "💼 Skill Gap"
       - href: ml_methods.ipynb
-        text: "ML Methods"
+        text: "🤖 ML Methods"
       - href: regression_methods.ipynb
-        text: "Regression Methods"
+        text: "📈 Regression"
+
+  page-footer:
+    left: "© 2025 Team 8 | Boston University"
+    right:
+      - icon: github
+        href: https://github.com/ChialingSung/ad688-employability-sp25A1-group8
+        text: "GitHub"
 
 format:
   html:
-    theme: sandstone
+    theme: flatly
     toc: true
+    toc-depth: 3
+    code-fold: true
+    code-tools: true
+    includes:
+      in-header: reference/fonts.html
+    smooth-scroll: true
+    link-external-newwindow: true
 
 execute:
   echo: true
   eval: true
-  code-fold: true
-

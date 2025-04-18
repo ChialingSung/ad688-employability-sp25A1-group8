@@ -7,44 +7,77 @@ csl: reference/csl/econometrica.csl
 format: 
   html:
     toc: true
+    toc-depth: 3
 ---
-<div style="background-color: #f5f6fa; padding: 2rem; text-align: center; border-radius: 1rem; margin-bottom: 2rem;">
-  <h1 style="margin-bottom: 0.5rem;">Mind the Gap</h1>
+
+<!-- 🟣 Hero Section -->
+<div style="background: linear-gradient(90deg, #f8f9fa, #e9ecef); padding: 2rem; border-radius: 1rem; text-align: center; margin-bottom: 2rem;">
+  <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">💡 Mind the Gap</h1>
   <p style="font-size: 1.2rem; color: #555;">Exploring Gender, Wages, and the Workforce Divide</p>
 </div>
 
-
-<div style="text-align: center;">
-  <img src="reference/home_1.png" alt="Gender Wage Gap Illustration" style="max-width: 400px; width: 100%;" />
-  <p style="font-size: 0.9em; color: gray;">Source:@chatgpt2025illustration</p>
+<!-- 👀 Illustration -->
+<div style="text-align: center; margin-bottom: 2rem;">
+  <img src="reference/home_1.png" alt="Gender Wage Gap Illustration" style="max-width: 420px; width: 100%; border-radius: 0.5rem;" />
+  <p style="font-size: 0.85rem; color: gray;">Source: @chatgpt2025illustration</p>
 </div>
-
 
 ---
 
 ## 📌 Project Overview
 
-This project investigates gender disparities in the U.S. labor market with a focus on wage inequality, occupational segregation, and the influence of political environments on gendered employment patterns.
+This project investigates **gender disparities** in the U.S. labor market — focusing on wage inequality, occupational segregation, and how political environments shape employment outcomes.
 
-Using real-world job posting and employment data, we explore:
+Using real-world job postings and labor statistics, we analyze:
 
-- Persistent gender pay gaps despite similar education or experience  
-- Overrepresentation of women in specific industries (e.g., education, healthcare)  
-- Effects of state-level labor policies on gender equality  
+- 📉 Persistent wage gaps despite equal qualifications  
+- 🧕 Female overrepresentation in caregiving industries (e.g., education, healthcare)  
+- 🗳️ Red vs. blue state policies and their effects on labor equality  
 
-We apply machine learning and natural language processing to extract insights and support **evidence-based policy recommendations**.
+We apply **machine learning** and **natural language processing** techniques to derive insights and support policy recommendations grounded in data.
 
 ---
 
 ## 🔍 Key Sections
 
-- 🏁 [Introduction](introduction.qmd): Background, motivation, and research focus  
-- 🧹 [Data Cleaning & Exploration](data_analysis.ipynb): Preprocessing and dataset structure  
-- 📈 [Exploratory Data Analysis](eda.ipynb): Initial visualizations and variable distributions  
-- 💼 [Skill Gap Analysis](skill_gap_analysis.ipynb): Demand vs. supply of skills by gender and industry  
-- 🤖 [ML Methods](ml_methods.ipynb): Classification, clustering, and regression approaches  
-- 📚 [NLP Methods](nlp_methods.ipynb): Topic modeling and resume–job matching  
-- 📎 [References](references.csv): Full bibliography of supporting literature  
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; padding-top: 1rem;">
+
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+🏁 <strong>[Introduction](introduction.qmd)</strong><br/>
+Motivation, background, and research scope
+</div>
+
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+🧹 <strong>[Data Cleaning](data_analysis.ipynb)</strong><br/>
+Dataset structure and preprocessing
+</div>
+
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+📈 <strong>[EDA](eda.ipynb)</strong><br/>
+Visualizations and variable distributions
+</div>
+
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+💼 <strong>[Skill Gap](skill_gap_analysis.ipynb)</strong><br/>
+Gender-industry skill demand vs. supply
+</div>
+
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+🤖 <strong>[ML Methods](ml_methods.ipynb)</strong><br/>
+Clustering and classification models
+</div>
+
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+📚 <strong>[NLP Methods](nlp_methods.ipynb)</strong><br/>
+Topic modeling and resume analysis
+</div>
+
+<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
+📎 <strong>[References](references.csv)</strong><br/>
+Supporting literature and datasets
+</div>
+
+</div>
 
 ---
 
@@ -53,19 +86,23 @@ We apply machine learning and natural language processing to extract insights an
 > “Equality means more than passing laws. The struggle is really won in the hearts and minds of the community.”  
 > — *Barbara Gittings*
 
-We believe data can tell powerful stories and drive actionable change. This project seeks to transform labor statistics into insights that help bridge the gender divide in the workforce.
+We believe that behind every datapoint is a story. This project turns workforce data into actionable insights — helping bridge gender gaps in employment and empowering fairer labor policies.
 
 ---
 
 ## 💻 Team Members
 
-Team 8 | AD688 | Boston University  
-Spring 2025
+**Team 8**  
+Boston University · AD688 · Spring 2025  
+- Jianhao Hong  
+- Xinran Li  
+- Chialing Sung  
+- Zimo Zeng
 
 ---
 
 ## 🔗 Start Exploring
 
-Click on any section above, or head directly to the [📖 Introduction](introduction.qmd) to begin reading.
+You can use the top navbar or click on any section above to begin. We recommend starting with the [📖 Introduction](introduction.qmd) for full context.
 
 ---
