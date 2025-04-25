@@ -265,13 +265,13 @@ Source: <span class="citation" data-cites="chatgpt2025illustration">ChatGPT (<a 
 <h2 class="anchored" data-anchor-id="key-sections">🔍 Key Sections</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; padding-top: 1rem;">
 <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
-<p>🏁 <strong><a href="./introduction.html">Introduction</a></strong><br> Motivation, background, and research scope</p>
+<p>📖 <strong><a href="./introduction.html">Introduction</a></strong><br> Motivation, background, and research scope</p>
 </div>
 <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
 <p>🧹 <strong><a href="./data_analysis.html">Data Cleaning</a></strong><br> Dataset structure and preprocessing</p>
 </div>
 <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
-<p>📈 <strong><a href="./eda.html">EDA</a></strong><br> Visualizations and variable distributions</p>
+<p>📊 <strong><a href="./eda.html">EDA</a></strong><br> Visualizations and variable distributions</p>
 </div>
 <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
 <p>💼 <strong><a href="./skill_gap_analysis.html">Skill Gap</a></strong><br> Gender-industry skill demand vs.&nbsp;supply</p>
@@ -280,10 +280,7 @@ Source: <span class="citation" data-cites="chatgpt2025illustration">ChatGPT (<a 
 <p>🤖 <strong><a href="./ml_methods.html">ML Methods</a></strong><br> Clustering and classification models</p>
 </div>
 <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
-<p>📚 <strong><a href="nlp_methods.ipynb">Regression Methods</a></strong><br> Regression modeling and analysis</p>
-</div>
-<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
-<p>📎 <strong><a href="references.csv">References</a></strong><br> Supporting literature and datasets</p>
+<p>📈 <strong><a href="./regression_methods.html">Regression</a></strong><br> Regression modeling and analysis</p>
 </div>
 </div>
 <hr>
@@ -824,7 +821,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; padding-top: 1rem;"&gt;</span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>🏁 &lt;strong&gt;<span class="co">[</span><span class="ot">Introduction</span><span class="co">](introduction.qmd)</span>&lt;/strong&gt;&lt;br/&gt;</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>📖 &lt;strong&gt;<span class="co">[</span><span class="ot">Introduction</span><span class="co">](introduction.qmd)</span>&lt;/strong&gt;&lt;br/&gt;</span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Motivation, background, and research scope</span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
@@ -834,7 +831,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>📈 &lt;strong&gt;<span class="co">[</span><span class="ot">EDA</span><span class="co">](eda.ipynb)</span>&lt;/strong&gt;&lt;br/&gt;</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>📊 &lt;strong&gt;<span class="co">[</span><span class="ot">EDA</span><span class="co">](eda.ipynb)</span>&lt;/strong&gt;&lt;br/&gt;</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>Visualizations and variable distributions</span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
@@ -849,44 +846,39 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>📚 &lt;strong&gt;<span class="co">[</span><span class="ot">Regression Methods</span><span class="co">](nlp_methods.ipynb)</span>&lt;/strong&gt;&lt;br/&gt;</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>📈 &lt;strong&gt;<span class="co">[</span><span class="ot">Regression</span><span class="co">](regression_methods.ipynb)</span>&lt;/strong&gt;&lt;br/&gt;</span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Regression modeling and analysis</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>&lt;div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;"&gt;</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>📎 &lt;strong&gt;<span class="co">[</span><span class="ot">References</span><span class="co">](references.csv)</span>&lt;/strong&gt;&lt;br/&gt;</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>Supporting literature and datasets</span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📖 Research Motivation</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; “Equality means more than passing laws. The struggle is really won in the hearts and minds of the community.”</span>  </span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; — *Barbara Gittings*</span></span>
 <span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📖 Research Motivation</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>We believe that behind every datapoint is a story. This project turns workforce data into actionable insights — helping bridge gender gaps in employment and empowering fairer labor policies.</span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; “Equality means more than passing laws. The struggle is really won in the hearts and minds of the community.”</span>  </span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; — *Barbara Gittings*</span></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>We believe that behind every datapoint is a story. This project turns workforce data into actionable insights — helping bridge gender gaps in employment and empowering fairer labor policies.</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## 💻 Team Members</span></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>**Team 8**  </span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>Boston University · AD688 · Spring 2025  </span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jianhao Hong  </span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Xinran Li  </span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chialing Sung  </span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zimo Zeng</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔗 Start Exploring</span></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>You can use the top navbar or click on any section above to begin. We recommend starting with the <span class="co">[</span><span class="ot">📖 Introduction</span><span class="co">](introduction.qmd)</span> for full context.</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="fu">## 💻 Team Members</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>**Team 8**  </span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>Boston University · AD688 · Spring 2025  </span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jianhao Hong  </span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Xinran Li  </span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chialing Sung  </span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zimo Zeng</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔗 Start Exploring</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>You can use the top navbar or click on any section above to begin. We recommend starting with the <span class="co">[</span><span class="ot">📖 Introduction</span><span class="co">](introduction.qmd)</span> for full context.</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

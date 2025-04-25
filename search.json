@@ -186,7 +186,7 @@
     "href": "index.html#key-sections",
     "title": "Job Market Analysis",
     "section": "🔍 Key Sections",
-    "text": "🔍 Key Sections\n\n\n🏁 Introduction Motivation, background, and research scope\n\n\n🧹 Data Cleaning Dataset structure and preprocessing\n\n\n📈 EDA Visualizations and variable distributions\n\n\n💼 Skill Gap Gender-industry skill demand vs. supply\n\n\n🤖 ML Methods Clustering and classification models\n\n\n📚 Regression Methods Regression modeling and analysis\n\n\n📎 References Supporting literature and datasets"
+    "text": "🔍 Key Sections\n\n\n📖 Introduction Motivation, background, and research scope\n\n\n🧹 Data Cleaning Dataset structure and preprocessing\n\n\n📊 EDA Visualizations and variable distributions\n\n\n💼 Skill Gap Gender-industry skill demand vs. supply\n\n\n🤖 ML Methods Clustering and classification models\n\n\n📈 Regression Regression modeling and analysis"
   },
   {
     "objectID": "index.html#research-motivation",
