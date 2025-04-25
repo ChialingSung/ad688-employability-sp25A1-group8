@@ -43,7 +43,7 @@ We apply **machine learning** and **regression model** techniques to derive insi
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; padding-top: 1rem;">
 
 <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
-🏁 <strong>[Introduction](introduction.qmd)</strong><br/>
+📖 <strong>[Introduction](introduction.qmd)</strong><br/>
 Motivation, background, and research scope
 </div>
 
@@ -53,7 +53,7 @@ Dataset structure and preprocessing
 </div>
 
 <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
-📈 <strong>[EDA](eda.ipynb)</strong><br/>
+📊 <strong>[EDA](eda.ipynb)</strong><br/>
 Visualizations and variable distributions
 </div>
 
@@ -68,13 +68,8 @@ Clustering and classification models
 </div>
 
 <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
-📚 <strong>[Regression](regression_methods.ipynb)</strong><br/>
+📈 <strong>[Regression](regression_methods.ipynb)</strong><br/>
 Regression modeling and analysis
-</div>
-
-<div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
-📎 <strong>[References](references.csv)</strong><br/>
-Supporting literature and datasets
 </div>
 
 </div>
