@@ -34,7 +34,7 @@ Using real-world job postings and labor statistics, we analyze:
 - 🧕 Female overrepresentation in caregiving industries (e.g., education, healthcare)  
 - 🗳️ Red vs. blue state policies and their effects on labor equality  
 
-We apply **machine learning** and **natural language processing** techniques to derive insights and support policy recommendations grounded in data.
+We apply **machine learning** and **regression model** techniques to derive insights and support policy recommendations grounded in data.
 
 ---
 
@@ -68,8 +68,8 @@ Clustering and classification models
 </div>
 
 <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
-📚 <strong>[NLP Methods](nlp_methods.ipynb)</strong><br/>
-Topic modeling and resume analysis
+📚 <strong>[Regression Methods](nlp_methods.ipynb)</strong><br/>
+Regression modeling and analysis
 </div>
 
 <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 10px;">
