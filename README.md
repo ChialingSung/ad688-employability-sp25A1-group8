@@ -23,7 +23,7 @@ This project explores gender disparities in the U.S. job market using real-world
 | **Exploratory Data Analysis**  | `eda.ipynb`                   | Enhanced visualizations (bar charts, boxplots, pie/donut charts) to analyze job posting volumes, salary distributions, and remote work types across industries. Added business implications for career planning and workforce strategy. |
 | **Skill Gap Analysis**        | `skill_gap_analysis.ipynb`     | Compared team members' self-assessed technical skills against market demands. Used heatmaps to identify gaps and proposed personalized upskilling strategies with recommended resources. |
 | **Machine Learning Methods**  | `ml_methods.ipynb`             | Applied KMeans clustering to group occupations by gender dominance. Used classification models (e.g., decision tree, random forest) to predict gender representation based on job attributes and geography. |
-| **NLP Methods** *(optional)*  | `nlp_methods.ipynb` *(if included)* | Conducted topic modeling on job descriptions, extracted skill keywords, and examined text-based differences between male- and female-dominated roles. |
+| **Regression Methods** | `regression_methods.ipynb`| Performed regression modeling on cleaned job market data to examine how gender composition, occupation, and state-level factors influence salary. Integrated topic modeling and skill keyword extraction to compare male- and female-dominated roles. |
 
 ---
 
@@ -45,7 +45,7 @@ This project explores gender disparities in the U.S. job market using real-world
 
 | Name            | Role                |
 |-----------------|---------------------|
-| Jianhao Hong    | NLP Method |
+| Jianhao Hong    | Regression Method |
 | Xinran Li       | Skill Gap         |
 | Chialing Sung   | eda |
 | Zimo Zeng       | ML Method |
